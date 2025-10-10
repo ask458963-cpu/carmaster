@@ -29,7 +29,7 @@ header{
   display:flex; align-items:center; gap:20px; justify-content:space-between;
 }
 .brand{
-  display:flex; align-items:center; gap: 20px;px;
+  display:flex; align-items:center; gap: 20px;
 }
 .brand img{height:44px; width:auto; border-radius:6px; object-fit:contain}
 .brand h3{margin:0; color:var(--primary); font-size:1.05rem; font-weight:700}
@@ -59,8 +59,8 @@ nav.desktop a:hover{color:var(--accent)}
   padding: 150px;
   background:linear-gradient(180deg, rgba(11,37,69,0.92), rgba(11,37,69,0.82));
   border-radius:12px;
-  background-image: url('background\ 1.png');
-  background-size:"cover"; background-position:center;
+  background-image: url("background 1.png");
+  background-size: cover; background-position:center;
   position:relative; overflow:hidden;
   box-shadow: var(--focus);
 }
@@ -149,6 +149,64 @@ footer{background:#08102a; color:#cfe6ff; padding:28px 20px; margin-top:30px}
   .hero-left{padding:18px}
   .hero-left .inner .hero-title{font-size:1.6rem}
   .book-card{position:relative; top:0}
+}
+
+/* ====== Mobile Enhancements ====== */
+@media (max-width:640px) {
+  /* mobile nav dropdown styling — JS will toggle the nav display */
+  nav.desktop {
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 64px;
+    right: 20px;
+    background: #fff;
+    display: none; /* toggled with inline JS */
+    flex-direction: column;
+    box-shadow: 0 8px 30px rgba(11,37,69,0.08);
+    border-radius: 8px;
+    padding: 12px;
+    z-index: 99;
+  }
+  nav.desktop a { padding: 10px 12px; text-align: left; }
+
+  .nav-wrap { padding: 12px 16px; }
+  .nav-cta { gap:12px }
+  .phone { font-size:0.9rem }
+}
+
+@media (max-width:480px){
+  .nav-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .brand h3 { font-size: 1rem }
+
+  .hero { grid-template-columns: 1fr; padding: 15px; }
+  .hero-left { padding: 20px; background-size: cover; background-position: center; }
+  .hero-left .inner { padding: 0 }
+  .hero-title { font-size: 1.4rem }
+  .hero-sub { font-size: 0.95rem }
+
+  .book-card { padding: 14px; width:100% }
+  .book-card h4 { margin-left: 0 }
+
+  .services-grid { grid-template-columns: 1fr }
+  .service img { height: 150px }
+
+  .grid-2 { grid-template-columns: 1fr }
+  .contact-grid { grid-template-columns: 1fr }
+
+  footer .footer-inner { flex-direction: column; text-align: center; gap: 10px }
+
+  .btn-primary, .btn-ghost { width: 100%; text-align: center }
+
+  /* increase tap targets */
+  nav.desktop a, .hamburger, .btn-primary, .btn-ghost { min-height:44px; }
+
+  /* stronger overlay to aid readability on small devices */
+  .hero-left::after { background: linear-gradient(180deg, rgba(11,37,69,0.95), rgba(11,37,69,0.85)); }
 }
 
 /* small helpers */
