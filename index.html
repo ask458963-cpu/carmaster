@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Car Master Auto Services</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- External CSS -->
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">
+      <!-- Replace with your logo file (images/YOUR-LOGO.png) or keep text -->
+      <img src="logo.jpg">
+      <div>
+        <h3>Car Master Auto Services</h3>
+        <div class="muted" style="font-size:0.85rem">Your Trusted Automotive Experts</div>
+      </div>
+    </div>
+
+    <nav class="desktop">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-cta">
+      <div class="phone">&#128222 +973 38447676</div>
+      <a class="btn-ghost" href="#contact">Contact</a>
+      <a class="btn-primary" href="#contact">Book Service</a>
+
+      <!-- simple mobile toggle -->
+      <button class="hamburger" aria-label="open menu" onclick="toggleMobile()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-left">
+    <div class="inner">
+      <span class="eyebrow">Expert Car Service</span>
+      <h1 class="hero-title">Expert Car Service <span style="color:var(--accent)">You Can Trust</span></h1>
+      <p class="hero-sub">Certified technicians • Quality parts • Transparent pricing • Fast turnaround. We service all makes & models.</p>
+
+      <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:18px">
+        <a class="btn-primary" href="#services">View Services</a>
+        <a class="btn-ghost" href="#contact">Get Directions</a>
+      </div>
+    </div>
+  </div>
+
+  <aside>
+    <div style="display:flex; flex-direction:column; gap:12px">
+      <!-- Booking Form -->
+      <div class="book-card" aria-hidden="false">
+        <h4>Book a Service</h4>
+        <form id="bookForm" onsubmit="return submitBooking(event)">
+          <div class="form-row">
+            <input type="text" id="bname" required placeholder="Your name">
+          </div>
+          <div class="form-row">
+            <input type="tel" id="bphone" required placeholder="Phone">
+          </div>
+          <div class="form-row">
+            <select id="bservice" required>
+              <option value="">Choose service</option>
+              <option>Mechanical</option>
+              <option>Electrical</option>
+              <option>AC Service</option>
+              <option>Others</option>
+            </select>
+            <button type="submit">Book Now</button>
+          </div>
+          <div class="muted" style="font-size:0.85rem">We'll call to confirm — or use WhatsApp.</div>
+        </form>
+      </div>
+
+      <!-- Why Choose -->
+      <div class="why-card">
+        <h4>Why Choose Car Master?</h4>
+        <ul class="why-list">
+          <li><div class="dot"></div><div><strong>Expert Diagnostics</strong><div class="muted">Advanced computer diagnostics for precise fixes.</div></div></li>
+          <li><div class="dot"></div><div><strong>Quality Parts</strong><div class="muted">OEM & premium aftermarket with warranty support.</div></div></li>
+          <li><div class="dot"></div><div><strong>Fair Pricing</strong><div class="muted">Transparent quotes — no hidden fees.</div></div></li>
+          <li><div class="dot"></div><div><strong>Quick Turnaround</strong><div class="muted">Many services completed same day.</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <p class="lead muted">Comprehensive auto services — mechanical, electrical and air conditioning maintenance.</p>
+
+  <div class="services-grid">
+    <div class="service">
+      <img src="MECH.png" alt="Mechanical">
+      <div class="body">
+        <h3>Mechanical Service</h3>
+        <p>From routine maintenance to major repairs, our expert technicians handle all aspects of mechanical servicing with precision and care. Whether it’s engine diagnostics, suspension work, transmission repairs, or brake system overhauls, we ensure your vehicle runs smoothly and safely on the road.</p>
+        <div class="price">Keeping your car running at its best</div>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="ELE.png" alt="Electrical">
+      <div class="body">
+        <h3>Electrical Service</h3>
+        <p>Modern vehicles rely heavily on advanced electrical systems. Our team specializes in diagnosing and repairing all electrical components, including wiring, alternators, starters, batteries, sensors, and advanced control modules. We use the latest diagnostic tools to keep your car’s electrical system reliable and efficient.</p>
+        <div class="price">Powering every drive with reliability</div>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="AC.png" alt="AC">
+      <div class="body">
+        <h3>AC & Climate</h3>
+        <p>Stay comfortable in every season with our professional A/C services. From gas refilling and leak detection to compressor repairs and complete system overhauls, we make sure your car’s cooling system delivers maximum performance. Enjoy a smooth and chilled ride with our expert A/C care.</p>
+        <div class="priceac">Cool comfort, wherever the road takes you</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US + REVIEWS -->
+<section class="section" id="reviews">
+  <div class="grid-2">
+    <div>
+      <h2>Why Local Customers Trust Us</h2>
+      <div class="panel">
+        <p><strong>Experienced technicians.</strong> ASE-certified staff, modern tools, and a shop that treats your car like its own.</p>
+        <p><strong>Guaranteed work.</strong> Clear quotes & warranty on parts and labor.</p>
+        <p class="muted">Open Sat–Thu • 7:30 - 1:00 • 2:00 - 6:30 </p>
+      </div>
+    </div>
+
+    <div>
+      <h2>Customer Reviews</h2>
+      <div class="panel">
+        <p class="testimonial">"Fast, honest and very professional. Fixed my AC the same day and charged fairly." — <strong>John M.</strong></p>
+        <hr style="border:none;border-top:1px solid #eef2f6;margin:12px 0;">
+        <p class="testimonial">"Great diagnostics — they found an electrical fault that others missed." — <strong>Priya S.</strong></p>
+        <hr style="border:none;border-top:1px solid #eef2f6;margin:12px 0;">
+        <p class="testimonial">"Friendly staff and clear pricing — will be my regular shop now." — <strong>Ahmed R.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section" style="padding-top:10px;">
+  <h2>About Car Master</h2>
+  <p class="lead muted">Car Master Auto Services has been keeping the community moving — one car at a time. We combine decades of experience with modern diagnostic tools to give your vehicle the attention it needs.</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section" style="padding-bottom:30px;">
+  <div style="max-width:1200px; margin:0 auto; padding:0 20px;">
+    <h2>Contact & Booking</h2>
+    <div class="contact-grid">
+      <div>
+        <div class="panel">
+          <p><strong>Phone:</strong> <a href="tel:97338447676">+973 38447676</a></p>
+          <p><strong>Email:</strong> <a href="mailto:service@carmasterbh.com">service@carmasterbh.com</a></p>
+          <p><strong>Address:</strong> Bldg 904, Road 126, Tubli 701, Kingdom of BAHRAIN</p>
+          <p class="muted">Prefer WhatsApp? Click below to message us directly.</p>
+          <a class="btn-primary" href="https://wa.me/97338447676" target="_blank" style="display:inline-block;margin-top:12px">Message on WhatsApp</a>
+        </div>
+
+        <div style="margin-top:16px" class="panel">
+          <h4>Quick Booking</h4>
+          <form id="contactForm" class="contact-form" onsubmit="return submitContact(event)">
+            <input type="text" id="cname" placeholder="Your name" required>
+            <input type="tel" id="cphone" placeholder="Phone" required>
+            <select id="cservice" required>
+              <option value="">Select service</option>
+              <option>Mechanical</option>
+              <option>Electrical</option>
+              <option>AC Service</option>
+              <option>Others</option>
+            </select>
+            <textarea id="cmessage" rows="4" placeholder="Message (optional)"></textarea>
+            <button type="submit">Request Service</button>
+          </form>
+        </div>
+      </div>
+
+      <aside>
+        <div class="panel">
+          <h4>Find Us</h4>
+          <div style="width:100%;height:260px;border-radius:8px;overflow:hidden;background:#eef2f6">
+            <!-- Replace src with your Google Maps embed link -->
+            <iframe width="100%" height="100%" style="border:0" loading="lazy"
+              src="https://maps.google.com/maps?q=Avenue 13/Extra-2, توبلي،, Bahrain &t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <strong>Car Master Auto Services</strong>
+      <div class="small">Your Trusted Automotive Service</div>
+    </div>
+    <div class="small">📞 +97338447676 &nbsp; • &nbsp; info@carmaster.com</div>
+  </div>
+</footer>
+
+<script>
+  /* Mobile nav toggling (simple) */
+  function toggleMobile(){
+    const nav = document.querySelector('nav.desktop');
+    if(nav.style.display === 'flex'){ nav.style.display = 'none'; }
+    else{ nav.style.display = 'flex'; nav.style.flexDirection = 'column'; nav.style.position='absolute';
+         nav.style.right='20px'; nav.style.top = '64px'; nav.style.background = '#fff'; nav.style.padding = '12px';
+         nav.style.boxShadow = '0 8px 30px rgba(11,37,69,0.08)'; nav.style.borderRadius = '8px';
+    }
+  }
+
+  /* Booking form (demo) */
+  function submitBooking(e){
+    e.preventDefault();
+    const name = document.getElementById('bname').value;
+    const phone = document.getElementById('bphone').value;
+    const service = document.getElementById('bservice').value;
+    alert('Thanks ' + name + '! We received your booking request for ' + service + '. We will call you at ' + phone + ' to confirm.');
+    e.target.reset();
+    return false;
+  }
+
+  /* Contact form (demo) */
+  function submitContact(e){
+    e.preventDefault();
+    const name = document.getElementById('cname').value;
+    const phone = document.getElementById('cphone').value;
+    const service = document.getElementById('cservice').value;
+    alert('Request received! ' + name + ', we will contact ' + phone + ' about ' + service + '.');
+    e.target.reset();
+    return false;
+  }
+</script>
+
+</body>
+</html>
