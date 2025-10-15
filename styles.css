@@ -38,7 +38,7 @@ nav.desktop a{color:var(--text); text-decoration:none; font-weight:500; padding:
 nav.desktop a:hover{color:var(--accent)}
 .nav-cta{display:flex; gap:30px; align-items:center}
 .phone { color:var(--primary); font-weight:600; font-size:0.95rem; }
-.btn-ghost{background:var(--accent);border:1px solid var(--primary); color:var(--muted); padding:8px 14px;border-radius:8px}
+.btn-ghost{background:var(--accent);border:1px solid var(--primary); color:#fff; padding:8px 14px;border-radius:8px}
 .btn-primary{background:var(--accent); color:#fff; padding:10px 16px; border-radius:8px; border:0; font-weight:600}
 
 /* Mobile nav toggle */
