@@ -1,7 +1,7 @@
 :root{
   --primary:#27292b;      /* deep blue */
   --accent:#FF7A00;       /* orange */
-  --muted:#F4F6F8;
+  --muted:#6b7b8a;
   --card:#4a2020;
   --text:#222;
   --focus: 0 10px 30px rgba(11,37,69,0.12);
@@ -210,4 +210,4 @@ footer{background:#08102a; color:#cfe6ff; padding:28px 20px; margin-top:30px}
 }
 
 /* small helpers */
-.muted{color:#cfe6ff}
+.muted{color:#6b7b8a}
